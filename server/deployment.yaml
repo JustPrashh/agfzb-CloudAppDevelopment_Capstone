@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     run: dealership
-  name: dealership
+    name: dealership
 spec:
   replicas: 1
   selector:
@@ -20,10 +20,11 @@ spec:
         run: dealership
     spec:
       containers:
-      - image: us.icr.io/sn-labs-azharskp1994/dealership:latest
+      - image: us.icr.io/capstone-dealership/dealership:latest
         imagePullPolicy: Always
         name: dealership
         ports:
         - containerPort: 8000
           protocol: TCP
       restartPolicy: Always
+  replicas: 1
